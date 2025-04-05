@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: 'Your premier travel partner in Goa offering tours, real estate, cruises, and vehicle rentals.',
     images: ['/og-image.jpg'],
   },
+  icons: {
+    icon: "/favicon.ico", // or "/favicon.png"
+  },
 };
 
 export default function RootLayout({
