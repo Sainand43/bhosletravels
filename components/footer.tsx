@@ -43,12 +43,11 @@ export function Footer() {
                 </p>
               </a>
               <p></p>
-              <a href="dreamhomenest@gmail.com">
-                <p className="flex items-center" > 
-                  <Mail className="h-5 w-5 mr-2"/>
-                  dreamhomenest@gmail.com
-                </p>
+              <a href="mailto:dreamhomenest@gmail.com" className="flex items-center">
+                <Mail className="h-5 w-5 mr-2" />
+                dreamhomenest@gmail.com
               </a>
+
             </div>
           {/*  <div className="mt-4 flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
