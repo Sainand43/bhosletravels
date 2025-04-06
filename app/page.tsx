@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Bean as Beach, Bot as Boat, Car, Home, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Phone } from 'lucide-react';
 
 export default function HomePG() {
   const popularDestinations = [
@@ -28,19 +29,22 @@ export default function HomePG() {
       title: "Real Estate",
       icon: Home,
       description: "Find your dream property in Goa",
-      link: "/services/real-estate"
+      link: "/services/real-estate",
+      image: "/images/re.png",
     },
     {
       title: "Cruises",
       icon: Boat,
       description: "Luxury cruise experiences",
-      link: "/services/cruises"
+      link: "/services/cruises",
+      image: "/images/cruise.png",
     },
     {
       title: "Vehicle Rental",
       icon: Car,
       description: "Bikes and cars for rent",
-      link: "/services/rentals"
+      link: "/services/rentals",
+      image: "/images/rcb.png",
     }
   ];
 
@@ -69,10 +73,49 @@ export default function HomePG() {
       {/* Popular Destinations */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            Popular Destinations
+          <h2 className="text-4xl font-bold text-center mb-7">
+            Introduction
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <p className="text-xl md:text-2xl text-center mb-12">
+          Discover Goa with Bhosle Travels – One of the <b>Best Travel Agencies in Goa.</b> Planning your Goan getaway? Bhosle Travels is your go-to choice among the best travel agencies in Goa, offering personalized tour packages, premium hotel deals, and unforgettable local experiences. From stunning beaches to heritage sites and thrilling water sports, we help you explore the best of Goa—stress-free and affordably. Let us plan your perfect trip!
+          </p>
+          <h2 className="text-4xl font-bold text-center mb-7">
+            About Us
+          </h2>
+          <p className="text-xl md:text-2xl text-center mb-12">
+          Your Trusted Local Travel Experts in Goa
+          At Bhosle Travels, we are more than just a travel agency—we are passionate locals who know Goa inside out. Recognized as one of the best travel agencies in Goa, our mission is to provide authentic, customized travel experiences that match your style and budget. With years of experience and hundreds of happy clients, we pride ourselves on reliable service, local expertise, and attention to detail.
+          </p>
+          <h2 className="text-4xl font-bold text-center mb-7">Our Services</h2>
+          <p className="text-xl md:text-2xl text-center mb-3">
+          What We Offer at Bhosle Travels
+          As one of the best travel agencies in Goa, we offer a wide range of services to make your trip seamless:
+          </p>
+          <ul className="text-xl md:text-2xl text-center mb-3">
+            <li>Tailor-made Goa tour packages (North & South Goa)</li>
+            <li>Budget and luxury hotel bookings</li>
+            <li>Private car rentals</li>
+            <li>Scuba diving, parasailing & adventure sports</li>
+            <li>Heritage and cultural guided tours</li>
+            <li>Honeymoon & group travel planning</li>
+          </ul>
+          <p className="text-xl md:text-2xl text-center mb-12">
+          Whatever your travel goal, we’re here to make it memorable.
+          </p>
+          <h2 className="text-4xl font-bold text-center mb-7">Contact Us Call-to-Action</h2>
+          <p className="text-xl md:text-2xl text-center mb-12">
+          Ready to Travel with One of the Best Travel Agencies in Goa?
+          Let Bhosle Travels handle your trip planning while you enjoy the magic of Goa. Reach out today for free consultation and the best travel deals!
+          </p>
+        <div className="max-w-7xl mx-auto flex justify-center items-center">
+        <Button asChild variant="default" className="text-center w-500 h-200 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+              <a href="tel:+918857883601" className="text-4xl font-bold text-center mb-7">
+                <Phone className="mr-4 h-8 w-8"/>
+                <h2 className="text-2xl text-center">Contact Us</h2>
+              </a>
+          </Button>
+       </div>
+          {/*<div className="grid md:grid-cols-3 gap-8">
             {popularDestinations.map((destination) => (
               <Card key={destination.name} className="overflow-hidden">
                 <div className="relative h-48">
@@ -89,7 +132,7 @@ export default function HomePG() {
                 </div>
               </Card>
             ))}
-          </div>
+            </div>*/}
         </div>
       </section>
 
@@ -103,7 +146,15 @@ export default function HomePG() {
             {services.map((service) => (
               <Link key={service.title} href={service.link}>
                 <Card className="p-6 hover:shadow-lg transition-shadow">
-                  <service.icon className="h-12 w-12 mb-4 text-primary" />
+                  <div className="relative h-64">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                  {/*<service.icon className="h-12 w-12 mb-4 text-primary" />*/}
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </Card>

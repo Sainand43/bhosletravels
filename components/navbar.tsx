@@ -10,9 +10,9 @@ export function Navbar() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/destinations', label: 'Destinations' },
+    /*{ href: '/destinations', label: 'Destinations' },*/
     { href: '/gallery', label: 'Gallery' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/best-places-to-visit-in-goa', label: 'Places' },
     { href: '/about', label: 'About' },
   ];
 

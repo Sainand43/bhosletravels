@@ -16,9 +16,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/destinations" className="text-gray-400 hover:text-white">Destinations</Link></li>
+              {/*<li><Link href="/destinations" className="text-gray-400 hover:text-white">Destinations</Link></li>*/}
               <li><Link href="/gallery" className="text-gray-400 hover:text-white">Gallery</Link></li>
-              <li><Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+              <li><Link href="/best-places-to-visit-in-goa" className="text-gray-400 hover:text-white">Places</Link></li>
               <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
             </ul>
           </div>
