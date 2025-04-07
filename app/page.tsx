@@ -144,7 +144,7 @@ export default function HomePG() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service) => (
-              <Link key={service.title} href={service.link}>
+              <Link key={service.title}>
                 <Card className="p-6 hover:shadow-lg transition-shadow">
                   <div className="relative h-64">
                   <Image
