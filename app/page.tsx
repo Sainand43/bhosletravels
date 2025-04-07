@@ -144,7 +144,7 @@ export default function HomePG() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service) => (
-              <Link key={service.title}>
+              <Link key={service.title} href={`https://wa.me/+918857883601`}>
                 <Card className="p-6 hover:shadow-lg transition-shadow">
                   <div className="relative h-64">
                   <Image
